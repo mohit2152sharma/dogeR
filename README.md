@@ -27,8 +27,11 @@ This is a basic example which shows you how to solve a common problem:
 library(dogeR)
 library(ggplot2)
 
-ggplot(mtcars) +
-  geom_doge(aes(mpg, wt, size=cyl))
+ggplot(mtcars) + 
+  geom_doge(aes(mpg, wt, size=cyl)) +
+  annotate(geom='text', x=25, y=4, label='such doge', color='red', size=8, fontface='bold') +
+  annotate(geom='text', x=12.5, y=4.5, label='wow', color='brown', size=8, fontface='bold') +
+  annotate(geom='text', x=17.5, y=2, label='much popular', color='blue', size=8, fontface='bold')
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
