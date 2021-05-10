@@ -1,0 +1,69 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+
+library(dogeR)
+```
+
+
+```{r echo=FALSE, eval=FALSE}
+library(magick)
+image  = image_read("inst/doge.png")
+hexSticker::sticker(subplot = image,
+                    s_x = 1,
+                    s_y = 1,
+                    s_width = 0.8,
+                    h_size = 1.2,
+                    h_fill = "#ffffff",
+                    h_color = "#223344",
+                    filename = "man/figures/logo.png")
+image_read("man/figures/logo.png")
+
+```
+
+
+# dogeR <img src="man/figures/logo.png" align="right" heigh=230/>
+
+
+
+<!-- badges: start -->
+![](https://img.shields.io/badge/usage-meme-yellow.svg)
+<!-- badges: end -->
+
+Doge for your ggplots
+
+## Installation
+
+You can install the released version of dogeR from [GitHub](https://github.com/mohit2152sharma/dogeR) with:
+
+``` r
+remotes::install_github("dogeR")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(dogeR)
+library(ggplot2)
+
+ggplot(mtcars) +
+  geom_doge(aes(mpg, wt, size=cyl))
+```
+
+## Acknowledgements
+
+* [coolbutuseless/geomlime](https://github.com/coolbutuseless/geomlime)
+* Tidyverse team for maintaining and developing `ggplot2`
+* [doge-image](https://www.pngaaa.com/detail/34415)
